@@ -1,0 +1,38 @@
+<br>
+
+<form class="form-horizontal">
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-danger" ng-click="reset()">Reset System</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2">Update Train Capacity:</label>
+        <div class="col-sm-10">
+            <input type=number min="5" max="1000" ng-model="train_capacity">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" ng-click="update_train_capacity()">Submit</button>
+        </div>
+    </div>
+
+    <div class="col-md-6" style="margin: 10px;">
+        <div class="alert alert-success" ng-hide="update_capacity_success">
+            <strong>Train Capacity Updated</strong>
+        </div>
+    </div>
+    
+    <div class="col-md-6" style="margin: 10px;">
+        <div class="alert alert-success" ng-hide="reset">
+            <strong>System Reset Successful</strong>
+        </div>
+    </div>
+
+</form>

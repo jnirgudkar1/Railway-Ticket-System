@@ -1,0 +1,402 @@
+[
+  {
+    "id": null,
+    "passengers": null,
+    "tickets": [
+      {
+        "id": null,
+        "train": {
+          "id": 2,
+          "train": {
+            "id": 1,
+            "name": "NB0600",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 6,
+              "minute": 0,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 2,
+            "express": true
+          },
+          "toStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "fromStation": {
+            "id": 1,
+            "name": "A"
+          },
+          "price": 4,
+          "duration": "01:03",
+          "capacity": 0,
+          "departureTime": "06:00",
+          "arrivalTime": "07:03"
+        },
+        "price": 8,
+        "duration": "01:03",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      },
+      {
+        "id": null,
+        "train": {
+          "id": 12,
+          "train": {
+            "id": 2,
+            "name": "SB0600",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 6,
+              "minute": 0,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 2,
+            "express": true
+          },
+          "toStation": {
+            "id": 6,
+            "name": "F"
+          },
+          "fromStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "price": 2,
+          "duration": "00:30",
+          "capacity": 0,
+          "departureTime": "07:39",
+          "arrivalTime": "08:09"
+        },
+        "price": 4,
+        "duration": "00:30",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      }
+    ],
+    "price": 13,
+    "duration": "02:09"
+  },
+  {
+    "id": null,
+    "passengers": null,
+    "tickets": [
+      {
+        "id": null,
+        "train": {
+          "id": 1982,
+          "train": {
+            "id": 9,
+            "name": "NB0700",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 7,
+              "minute": 0,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 2,
+            "express": true
+          },
+          "toStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "fromStation": {
+            "id": 1,
+            "name": "A"
+          },
+          "price": 4,
+          "duration": "01:03",
+          "capacity": 0,
+          "departureTime": "07:00",
+          "arrivalTime": "08:03"
+        },
+        "price": 8,
+        "duration": "01:03",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      },
+      {
+        "id": null,
+        "train": {
+          "id": 286,
+          "train": {
+            "id": 4,
+            "name": "SB0615",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 6,
+              "minute": 15,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 1,
+            "express": false
+          },
+          "toStation": {
+            "id": 6,
+            "name": "F"
+          },
+          "fromStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "price": 1,
+          "duration": "00:37",
+          "capacity": 0,
+          "departureTime": "08:15",
+          "arrivalTime": "08:52"
+        },
+        "price": 2,
+        "duration": "00:37",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      }
+    ],
+    "price": 11,
+    "duration": "01:52"
+  },
+  {
+    "id": null,
+    "passengers": null,
+    "tickets": [
+      {
+        "id": null,
+        "train": {
+          "id": 1982,
+          "train": {
+            "id": 9,
+            "name": "NB0700",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 7,
+              "minute": 0,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 2,
+            "express": true
+          },
+          "toStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "fromStation": {
+            "id": 1,
+            "name": "A"
+          },
+          "price": 4,
+          "duration": "01:03",
+          "capacity": 0,
+          "departureTime": "07:00",
+          "arrivalTime": "08:03"
+        },
+        "price": 8,
+        "duration": "01:03",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      },
+      {
+        "id": null,
+        "train": {
+          "id": 936,
+          "train": {
+            "id": 6,
+            "name": "SB0630",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 6,
+              "minute": 30,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 1,
+            "express": false
+          },
+          "toStation": {
+            "id": 6,
+            "name": "F"
+          },
+          "fromStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "price": 1,
+          "duration": "00:37",
+          "capacity": 0,
+          "departureTime": "08:30",
+          "arrivalTime": "09:07"
+        },
+        "price": 2,
+        "duration": "00:37",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      }
+    ],
+    "price": 11,
+    "duration": "02:07"
+  },
+  {
+    "id": null,
+    "passengers": null,
+    "tickets": [
+      {
+        "id": null,
+        "train": {
+          "id": 1982,
+          "train": {
+            "id": 9,
+            "name": "NB0700",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 7,
+              "minute": 0,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 2,
+            "express": true
+          },
+          "toStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "fromStation": {
+            "id": 1,
+            "name": "A"
+          },
+          "price": 4,
+          "duration": "01:03",
+          "capacity": 0,
+          "departureTime": "07:00",
+          "arrivalTime": "08:03"
+        },
+        "price": 8,
+        "duration": "01:03",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      },
+      {
+        "id": null,
+        "train": {
+          "id": 1992,
+          "train": {
+            "id": 10,
+            "name": "SB0700",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 7,
+              "minute": 0,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 2,
+            "express": true
+          },
+          "toStation": {
+            "id": 6,
+            "name": "F"
+          },
+          "fromStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "price": 2,
+          "duration": "00:30",
+          "capacity": 0,
+          "departureTime": "08:39",
+          "arrivalTime": "09:09"
+        },
+        "price": 4,
+        "duration": "00:30",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      }
+    ],
+    "price": 13,
+    "duration": "02:09"
+  },
+  {
+    "id": null,
+    "passengers": null,
+    "tickets": [
+      {
+        "id": null,
+        "train": {
+          "id": 1982,
+          "train": {
+            "id": 9,
+            "name": "NB0700",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 7,
+              "minute": 0,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 2,
+            "express": true
+          },
+          "toStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "fromStation": {
+            "id": 1,
+            "name": "A"
+          },
+          "price": 4,
+          "duration": "01:03",
+          "capacity": 0,
+          "departureTime": "07:00",
+          "arrivalTime": "08:03"
+        },
+        "price": 8,
+        "duration": "01:03",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      },
+      {
+        "id": null,
+        "train": {
+          "id": 1586,
+          "train": {
+            "id": 8,
+            "name": "SB0645",
+            "capacity": 1000,
+            "departureTime": {
+              "hour": 6,
+              "minute": 45,
+              "second": 0,
+              "nano": 0
+            },
+            "rate": 1,
+            "express": false
+          },
+          "toStation": {
+            "id": 6,
+            "name": "F"
+          },
+          "fromStation": {
+            "id": 11,
+            "name": "K"
+          },
+          "price": 1,
+          "duration": "00:37",
+          "capacity": 0,
+          "departureTime": "08:45",
+          "arrivalTime": "09:22"
+        },
+        "price": 2,
+        "duration": "00:37",
+        "dateOfJourney": "2017-12-17",
+        "numberOfPassengers": 2
+      }
+    ],
+    "price": 11,
+    "duration": "02:22"
+  }
+]

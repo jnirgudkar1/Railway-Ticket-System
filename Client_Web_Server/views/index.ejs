@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='stylesheets/login.css' />
+    <script src="js/siginin.js"></script>
+</head>
+
+<body ng-app="login" ng-controller="login_controller">
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 col-md-offset-4">
+                <div class="form-body">
+                    <ul class="nav nav-tabs final-login">
+                        <li class="active"><a data-toggle="tab" data-target="#sectionA">Sign In</a></li>
+                        <li><a data-toggle="tab" data-target="#sectionB">Join us!</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="sectionA" class="tab-pane fade in active">
+                            <div class="innter-form">
+                                <form class="sa-innate-form">
+                                    <label>Email Address</label>
+                                    <input type="text" ng-model="emailid">
+                                    <label>Password</label>
+                                    <input type="password" ng-model="password">
+                                    <button type="submit" ng-click="signin()">Sign In</button>
+                                    <a href="">Forgot Password?</a>
+                                    <div class="col-md-12" style="margin: 10px;">
+                                        <div class="alert alert-danger" ng-hide="invalidlogin">
+                                            <strong>Invalid username or password</strong>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div>
+                                <br>
+                                <br>
+                                <button type="button" class="btn btn-default"><a href="/login/facebook">Sign in with Facebook</a></button>
+                                <button type="button" class="btn btn-default pull-right"><a href="/auth/google">Sign in with Google</a></button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="sectionB" class="tab-pane fade">
+                            <div class="innter-form">
+                                <form class="sa-innate-form">
+                                    <label>First Name</label>
+                                    <input type="text" ng-model="firstname">
+                                    <label>Last Name</label>
+                                    <input type="text" ng-model="lastname">
+
+                                    <label>Email Address</label>
+                                    <input type="text" ng-model="emailid">
+                                    <label>Password</label>
+                                    <input type="password" ng-model="password">
+
+                                    <button type="submit" ng-click="register()">Join now</button>
+                                    <p>By clicking Join now, you agree to our User Agreement, Privacy Policy, and Cookie Policy.</p>
+
+                                    <div class="col-md-12" style="margin: 10px;">
+                                        <div class="alert alert-success" ng-hide="validregistration">
+                                            <strong>Registration Successful</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12" style="margin: 10px;">
+                                        <div class="alert alert-danger" ng-hide="invalidregistration">
+                                            <strong>Please Fill Out all the fields</strong>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

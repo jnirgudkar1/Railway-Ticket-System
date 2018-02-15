@@ -1,0 +1,217 @@
+<br xmlns:hh="http://www.w3.org/1999/xhtml">
+<br>
+<div class="container">
+    <h2>Train Search</h2>
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">No of passengers:</label>
+            <div class="col-sm-10">
+                <input type=number min="1" max="10" ng-model="passengers">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Departure Time:</label>
+            <div class="col-sm-10">
+                <input type="datetime-local" ng-model="departure_time" id="dept_time" min="2017-12-20T00:00:00">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">From Station:</label>
+            <div class="col-sm-10">
+                <select ng-model="from_station">
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                    <option value="4">D</option>
+                    <option value="5">E</option>
+                    <option value="6">F</option>
+                    <option value="7">G</option>
+                    <option value="8">H</option>
+                    <option value="9">I</option>
+                    <option value="10">J</option>
+                    <option value="11">K</option>
+                    <option value="12">L</option>
+                    <option value="13">M</option>
+                    <option value="14">N</option>
+                    <option value="15">O</option>
+                    <option value="16">P</option>
+                    <option value="17">Q</option>
+                    <option value="18">R</option>
+                    <option value="19">S</option>
+                    <option value="20">T</option>
+                    <option value="21">U</option>
+                    <option value="22">V</option>
+                    <option value="23">W</option>
+                    <option value="24">X</option>
+                    <option value="25">Y</option>
+                    <option value="26">Z</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">To Station:</label>
+            <div class="col-sm-10">
+                <select ng-model=to_station>
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                    <option value="4">D</option>
+                    <option value="5">E</option>
+                    <option value="6">F</option>
+                    <option value="7">G</option>
+                    <option value="8">H</option>
+                    <option value="9">I</option>
+                    <option value="10">J</option>
+                    <option value="11">K</option>
+                    <option value="12">L</option>
+                    <option value="13">M</option>
+                    <option value="14">N</option>
+                    <option value="15">O</option>
+                    <option value="16">P</option>
+                    <option value="17">Q</option>
+                    <option value="18">R</option>
+                    <option value="19">S</option>
+                    <option value="20">T</option>
+                    <option value="21">U</option>
+                    <option value="22">V</option>
+                    <option value="23">W</option>
+                    <option value="24">X</option>
+                    <option value="25">Y</option>
+                    <option value="26">Z</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Ticket Type:</label>
+            <div class="col-sm-10">
+                <select ng-model="ticket_type">
+                    <option>Regular</option>
+                    <option>Express</option>
+                    <option>Any</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">No of connections:</label>
+            <div class="col-sm-10">
+                <select ng-model=connections>
+                    <option>None</option>
+                    <option>One</option>
+                    <option>Any</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="roundtrip"> Round Trip</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="isExact"> Exact time</label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group" ng-show="roundtrip">
+            <label class="control-label col-sm-2" for="pwd">Return Time:</label>
+            <div class="col-sm-10">
+                <input type="datetime-local" ng-model="return_time">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" ng-click="search()">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<h4 class="card-title">Search Results</h4>
+<div class="row">
+    <div class="col-md-10">
+        <div class="card" ng-repeat="x in result">
+            <br>
+            <div class="card-block">
+
+                <ul class="list-group list-group-flush">
+                    <!--<li class="list-group-item">Repeating tickets</li>-->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train</th>
+                                <th scope="col">From Station</th>
+                                <th scope="col">To Station</th>
+                                <th scope="col">Departure Time</th>
+                                <th scope="col">Arrival Time</th>
+                                <!--<th scope="col">Duration</th>-->
+                                <th scope="col">Price</th>
+                                <th scope="col">Total Duration</th>
+                                <th scope="col">Total Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="y in x.tickets">
+                                <td>{{y.train.train.name}}</td>
+                                <td>{{y.train.fromStation.name}}</td>
+                                <td>{{y.train.toStation.name}}</td>
+                                <td>{{y.train.departureTime}}</td>
+                                <td>{{y.train.arrivalTime}}</td>
+                                <!--<td>{{y.train.duration}}</td>-->
+                                <td>{{y.price}}</td>
+                                <td>{{x.duration}}</td>
+                                <td>{{x.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ul>
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal" ng-click="book(x)">Book</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal for booking ticket -->
+<div class="modal" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Confirm Booking</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group" ng-repeat="x in numberOfPassengers">
+                    <label class="control-label col-md-12" for="pwd">Name of passenger {{x+1}}</label>
+                    <div class="col-sm-10">
+                        <input type=text ng-model="name[x+1]">
+                    </div>
+                </div>
+                <br>
+                <br>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="confirmBooking()">Confirm booking</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="searchRoute()">Close</button>
+
+                <div class="col-md-12" style="margin: 10px;">
+                    <div class="alert alert-success" ng-hide="bookingsuccessful">
+                        <strong>Booking successful</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

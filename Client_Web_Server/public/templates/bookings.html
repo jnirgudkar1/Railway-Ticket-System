@@ -1,0 +1,83 @@
+<h1>Welcome to bookings page</h1>
+
+<div class="row">
+    <div class="col-md-10">
+        <div class="card" ng-repeat="x in myBookings">
+            <br>
+            <div class="card-block">
+
+                <ul class="list-group list-group-flush">
+                    <!--<li class="list-group-item">Repeating tickets</li>-->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Train</th>
+                            <th scope="col">From Station</th>
+                            <th scope="col">To Station</th>
+                            <th scope="col">Departure Time</th>
+                            <th scope="col">Arrival Time</th>
+                            <!--<th scope="col">Duration</th>-->
+                            <th scope="col">Price</th>
+                            <th scope="col">Total Duration</th>
+                            <!--<th scope="col">Total Price</th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="y in x.tickets">
+                            <td>{{y.train.train.name}}</td>
+                            <td>{{y.train.fromStation.name}}</td>
+                            <td>{{y.train.toStation.name}}</td>
+                            <td>{{y.train.departureTime}}</td>
+                            <td>{{y.train.arrivalTime}}</td>
+                           <!-- <td>{{y.train.duration}}</td>-->
+                            <td>{{y.price}}</td>
+                            <td>{{x.duration}}</td>
+                            <!--<td>{{x.price}}</td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+                </ul>
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" ng-click="cancel(x)">Cancel</button>
+                <!--data-target="#myModal"-->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal for booking ticket -->
+<!--
+<div class="modal" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        &lt;!&ndash; Modal content&ndash;&gt;
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Confirm Booking</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group" ng-repeat="x in numberOfPassengers">
+                    <label class="control-label col-md-12" for="pwd">Name of passenger {{x.number+1}}</label>
+                    <div class="col-sm-10">
+                        <input type=text ng-model="name[x+1]">
+                    </div>
+                </div>
+                <br>
+                <br>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="confirmBooking()">Confirm booking</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="searchRoute()">Close</button>
+
+                <div class="col-md-12" style="margin: 10px;">
+                    <div class="alert alert-success" ng-hide="bookingsuccessful">
+                        <strong>Booking successful</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>-->
